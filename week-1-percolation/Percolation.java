@@ -97,7 +97,7 @@ public class Percolation {
         return false;
     }
 
-    public void printGroups() {
+    private void printGroups() {
         System.out.println("Group:");
         for (int i = 1; i <= n; i ++) {
             for (int j = 1; j <= n; j ++) {
