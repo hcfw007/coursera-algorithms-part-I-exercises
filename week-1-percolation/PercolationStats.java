@@ -53,11 +53,13 @@ public class PercolationStats {
 
     // test client (see below)
     public static void main(String[] args) {
-        int n = 200;
-        int t = 100;
-        PercolationStats ps = new PercolationStats(n, t);
-        System.out.println("mean = " + ps.mean());
-        System.out.println("stddev = " + ps.stddev());
-        System.out.println("95% confidence intercal = [" + ps.confidenceLo() + ", " + ps.confidenceHi() + "]");
+    {
+        int n, trials;
+        n = StdIn.readInt();
+        trials = StdIn.readInt();
+        PercolationStats ps = new PercolationStats(n, trials);
+        StdOut.println("mean                    = " + ps.mean());
+        StdOut.println("stddev                  = " + ps.stddev());
+        StdOut.println("95% confidence interval = " + "[" + ps.confidenceLo() + ", " + ps.confidenceHi() + "]");
     }
 }
