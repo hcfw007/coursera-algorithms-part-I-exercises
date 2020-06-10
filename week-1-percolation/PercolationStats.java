@@ -1,4 +1,3 @@
-import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.StdStats;
@@ -56,8 +55,8 @@ public class PercolationStats {
     // test client (see below)
     public static void main(String[] args) {
         int n, trials;
-        n = StdIn.readInt();
-        trials = StdIn.readInt();
+        n = Integer.parseInt(args[0]);
+        trials = Integer.parseInt(args[1]);
         PercolationStats ps = new PercolationStats(n, trials);
         StdOut.println("mean                    = " + ps.mean());
         StdOut.println("stddev                  = " + ps.stddev());
