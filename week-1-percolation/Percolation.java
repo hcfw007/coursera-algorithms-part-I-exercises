@@ -89,6 +89,9 @@ public class Percolation {
 
     // does the system percolate?
     public boolean percolates() {
+        if (this.n == 1) {
+            return this.isOpen(1, 1);
+        }
         for (int i = 0; i < n; i ++) {
             if (this.finalGroup(n, i + 1) == -1) {
                 return true;
